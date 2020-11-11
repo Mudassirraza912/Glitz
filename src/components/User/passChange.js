@@ -148,7 +148,7 @@ export default class PassChange extends Component {
         if (allCheck === true) {
             
         
-            fetch("http://soplush.ingicweb.com/soplush/auth/change_password.php?action=change_password", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/auth/change_password.php?action=change_password", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -205,7 +205,7 @@ export default class PassChange extends Component {
 
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { 
                             this.setState({
@@ -231,7 +231,7 @@ export default class PassChange extends Component {
                             <View style={{ flex: 1, justifyContent: "center", alignContent: "center", alignItems: "center", marginTop: 20 }}>
 
 
-                                <View style={{ backgroundColor: "#fff", borderRadius: 10, width: "90%", padding: 10 }}>
+                                <View style={{ backgroundColor: '#800', borderRadius: 10, width: "90%", padding: 10 }}>
 
 
                                     {/* <Item  style={{width:"80%"}}>
@@ -294,7 +294,7 @@ export default class PassChange extends Component {
                                                 </Button>
                                             </LinearGradient> */}
 
-                                    {!this.state.loader ?   <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "100%", borderRadius: 10 }}>
+                                    {!this.state.loader ?   <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "100%", borderRadius: 10 }}>
                                             <TouchableOpacity onPress={() => { this.changePassword() }}style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                                 <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15 , fontWeight:'bold'}}>
                                                     UPDATE PASSWORD

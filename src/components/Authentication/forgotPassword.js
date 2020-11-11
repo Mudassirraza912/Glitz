@@ -120,7 +120,7 @@ export default class ForgotPassword extends Component {
                 console.log("email, password", email, password)
 
 
-            fetch("http://soplush.ingicweb.com/soplush/auth/forgot_password.php?action=forget_password", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/auth/forgot_password.php?action=forget_password", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -176,7 +176,7 @@ export default class ForgotPassword extends Component {
             console.log("email, password", email, password)
 
 
-        fetch("http://soplush.ingicweb.com/soplush/auth/forgot_password.php?action=forget_password", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/auth/forgot_password.php?action=forget_password", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -231,7 +231,7 @@ export default class ForgotPassword extends Component {
             console.log("email, code", email, code)
 
 
-            fetch("http://soplush.ingicweb.com/soplush/auth/forgot_password.php?action=check_code", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/auth/forgot_password.php?action=check_code", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -288,7 +288,7 @@ export default class ForgotPassword extends Component {
             console.log("email, code, password", email, code, password)
 
 
-            fetch("http://soplush.ingicweb.com/soplush/auth/forgot_password.php?action=change_password", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/auth/forgot_password.php?action=change_password", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -331,7 +331,7 @@ export default class ForgotPassword extends Component {
                     <Text style={{ fontFamily: "Poppins-Regular", marginTop: "4%", width:'80%', textAlign:'center', opacity: 0.6 }}>To reset your password, Please enter your email</Text>
                 </View>
 
-                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: "#fff", borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "3%", overflow: "hidden" }}>
+                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: '#800', borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "3%", overflow: "hidden" }}>
                     {/* // Text input box with icon aligned to the left */}
                     {/* <List>
                                         <ListItem avatar>
@@ -380,7 +380,7 @@ export default class ForgotPassword extends Component {
                     </Text>
                         </Button>
                     </LinearGradient> */}
-                                    <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+                                    <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity  onPress={this.codeMailFetch} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10, width:'100%' }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15, fontWeight:'bold' }}>
                                             CONTINUE
@@ -405,7 +405,7 @@ export default class ForgotPassword extends Component {
                     <Text style={{ fontFamily: "Poppins-Regular", marginTop: "4%", textAlign: "center", width:'80%', opacity: 0.6 }}>To verify your email . Please Enter 4 digit code</Text>
                 </View>
 
-                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: "#fff", borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "4%", marginBottom: "5%", justifyContent: "center" }}>
+                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: '#800', borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "4%", marginBottom: "5%", justifyContent: "center" }}>
 
 
                     <CodeInput
@@ -512,7 +512,7 @@ export default class ForgotPassword extends Component {
                     </Text>
                         </Button>
                     </LinearGradient> */}
-                    <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+                    <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity  onPress={this.codeChecker} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10, width:'100%' }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15, fontWeight:'bold' }}>
                                             CONTINUE
@@ -537,7 +537,7 @@ export default class ForgotPassword extends Component {
                     <Text style={{ fontFamily: "Poppins-Regular", marginTop: "4%", opacity: 0.6, textAlign: "center" , width:'80%'}}>Enter your new Password to Login Your Account</Text>
                 </View>
 
-                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: "#fff", borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "1%", padding: "4%" }}>
+                <View style={{ marginTop: "10%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "90%", backgroundColor: '#800', borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "1%", padding: "4%" }}>
                     {/* // Text input box with icon aligned to the left */}
                     {/* <Item floatingLabel>
                         <Icon active name='lock-outline' type="MaterialCommunityIcons" />
@@ -589,7 +589,7 @@ export default class ForgotPassword extends Component {
                     </Text>
                         </Button>
                     </LinearGradient> */}
-                     <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+                     <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity  onPress={this.changePassword} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10, width:'100%' }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15 , fontWeight:'bold'}}>
                                             Submit

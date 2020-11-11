@@ -50,7 +50,7 @@ export default class UserAppointment extends Component {
 
 componentDidMount() {
   const { customDates } = this.state
-  fetch(`http://soplush.ingicweb.com/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
+  fetch(`http://hnh1.xyz/soplush_new/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
 
           }).then(res => res.json())
               .then(resp => {
@@ -93,7 +93,7 @@ componentDidMount() {
 
 
         <Header
-          containerStyle={{ marginTop: 40, backgroundColor: "#fff", borderBottomColor: "#000", borderBottomWidth: 1, height: 100 }}
+          containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomColor: "#000", borderBottomWidth: 1, height: 100 }}
           placement="left"
           leftContainerStyle={{ marginTop: 10 }}
           centerContainerStyle={{ marginTop: 10 }}
@@ -101,7 +101,7 @@ componentDidMount() {
           centerComponent={<Text style={{ alignSelf: "center", fontSize: 20, fontFamily: "Poppins-Regular" }}>BOOK APPOINTMENT</Text>}
         />
 
-        <Header containerStyle={{ backgroundColor: "#fff", height: 60, width: '100%' }}
+        <Header containerStyle={{ backgroundColor: '#800', height: 60, width: '100%', borderBottomWidth:0 }}
           placement="left">
           <View style={{ display: "flex", flexDirection: "row", marginTop: -20, alignItems: 'center', alignContent: 'center', width: '100%' }}>
 
@@ -158,14 +158,14 @@ componentDidMount() {
           </View>
         </Header>
 
-        <View style={{ flex: 1, width: '100%', backgroundColor: "rgba(246, 232, 232, 0.7)", justifyContent: "center" }}>
+        <View style={{ flex: 1, width: '100%', backgroundColor: "#800", justifyContent: "center" }}>
 
           <ScrollView>
 
             <View style={{justifyContent: "center", alignContent: "center", alignItems: "center", marginTop: 20 }}>
 
 
-              <Card containerStyle={{ backgroundColor: "#fff", borderRadius: 10, width: "95%", overflow: 'hidden' }}>
+              <Card containerStyle={{ backgroundColor: '#800', borderRadius: 10, width: "95%", overflow: 'hidden', borderColor:'#800' }}>
 
                 <View >
                 </View>
@@ -275,14 +275,14 @@ componentDidMount() {
                     // }}
                     
                     theme={{
-                      backgroundColor: '#ffffff',
-                      calendarBackground: '#ffffff',
+                      backgroundColor: '#800',
+                      calendarBackground: '#800',
                       textSectionTitleColor: '#000',
                       selectedDayBackgroundColor: '#00adf5',
-                      selectedDayTextColor: '#ffffff',
-                      todayTextColor: '#000',
-                      dayTextColor: '#2d4150',
-                      textDisabledColor: '#d9e1e8',
+                      selectedDayTextColor: '#800',
+                      todayTextColor: '#fff',
+                      dayTextColor: '#000',
+                      textDisabledColor: 'gray',
                       dotColor: '#00adf5',
                       selectedDotColor: '#ffffff',
                       arrowColor: 'orange',

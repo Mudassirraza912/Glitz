@@ -78,7 +78,7 @@ export default class UserNotification extends Component {
         const formData = new FormData()
         formData.append("common_id",profileData.user_id)
         console.log("formData", formData)
-        fetch("http://soplush.ingicweb.com/soplush/notification/notification_api.php?action=get_notification", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/notification/notification_api.php?action=get_notification", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -141,7 +141,7 @@ export default class UserNotification extends Component {
           subtitleStyle={{color:"red", fontFamily:"Poppins-Regular", textAlignVertical: "bottom", marginTop: 8}}
           leftAvatar={{
             // source: item.icon &&  item.icon ,
-            source:{uri: `http://soplush.ingicweb.com/soplush/profile_pics/${item.profile_pic}`},
+            source:{uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${item.profile_pic}`},
             titleStyle:{fontFamily:"Poppins-Regular"},
             // title: item.data[0],
             rounded:false,
@@ -165,7 +165,7 @@ export default class UserNotification extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{height:"100%", width:"100%"}}> 
 
                 <Header
-                    containerStyle={{marginTop:60, backgroundColor:"#fff"}}
+                    containerStyle={{marginTop:60, backgroundColor:"#800", borderBottomWidth:0}}
                     placement="left"
                     leftComponent={<Icon onPress={() => {this.props.navigation.navigate('UserHome')}} name="arrow-back" color="#000" />}
                     centerComponent={<Text style={{alignSelf:"center",fontSize:20, fontFamily:"Poppins-Regular"}}>NOTIFICATIONS</Text>}

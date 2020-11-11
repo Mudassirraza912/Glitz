@@ -28,11 +28,11 @@ class DrawerMenu extends Component {
 
 
   render() {
-    console.log(`http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`)
+    console.log(`http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`)
     return (
 
       <View style={{ flex: 1, justifyContent: "center", alignContent: "center", height: '100%', backgroundColor: 'rgba(246, 232, 232, 0.5)'}}>
-        <Header style={{ height: 100, backgroundColor: '#F6E8E8', marginBottom: '0%', borderBottomColor: 'rgba(246, 232, 232, 0.5)', borderBottomWidth: 1, justifyContent: 'flex-start' }}>
+        <Header style={{ height: 100, backgroundColor: '#800', marginBottom: '0%', borderBottomColor: '#800', borderBottomWidth: 1, justifyContent: 'flex-start' }}>
           <TouchableOpacity onPress={() => { 
             this.props.navigation.navigate('ProProfile') 
             this.props.navigation.closeDrawer()
@@ -42,17 +42,17 @@ class DrawerMenu extends Component {
             {(this.props.screenProps.profileData.profile_pic !== "" && this.props.screenProps.profileData.profile_pic !== null) ? 
             <View >
                 <Avatar
-                  overlayContainerStyle={{ backgroundColor: "#fff" }}
+                  overlayContainerStyle={{ backgroundColor: '#800' }}
                   rounded
                   size="large"
-                  source={{ uri: `http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}` }}
+                  source={{ uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}` }}
                 />
 
               </View> : 
               
               <View >
               <Avatar
-                overlayContainerStyle={{ backgroundColor: "#fff" }}
+                overlayContainerStyle={{ backgroundColor: '#800' }}
                 rounded
                 size="large"
                 source={defaultImage}
@@ -86,9 +86,9 @@ class DrawerMenu extends Component {
 
 
 
-        {/* <Content style={{ backgroundColor: '#fff', marginTop: 20,  height: "100%", }}> */}
+        {/* <Content style={{ backgroundColor: '#800', marginTop: 20,  height: "100%", }}> */}
 
-        <ImageBackground source={require('../../assets/inner.png')} style={{ height: "100%", width: "100%", flex: 1, backgroundColor: "#fff" }} resizeMethod="auto">
+        <ImageBackground source={require('../../assets/inner.png')} style={{ height: "100%", width: "100%", flex: 1, backgroundColor: '#800' }} resizeMethod="auto">
           <ScrollView>
 
             <TouchableOpacity

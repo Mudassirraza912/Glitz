@@ -182,7 +182,7 @@
                             titleStyle={{ fontFamily: "Poppins-Regular", fontWeight:'bold' }}
                             subtitleStyle={{ color: "red", fontFamily: "Poppins-Regular" }}
                             leftAvatar={{
-                                source: item.profile_pic && { uri: `http://soplush.ingicweb.com/soplush/profile_pics/${item.profile_pic}` },
+                                source: item.profile_pic && { uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${item.profile_pic}` },
                                 titleStyle: { fontFamily: "Poppins-Regular" },
                                 // title: item.data[0],
                                 rounded: true,
@@ -212,7 +212,7 @@
                         <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%" }}>
 
                             <Header
-                                containerStyle={{ marginTop: 60, backgroundColor: "#fff" }}
+                                containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
                                 placement="left"
                                 leftComponent={<Icon onPress={() => { this.props.navigation.goBack() }} name="arrow-back" color="#000" />}
                                 centerComponent={<Text style={{alignSelf:'center',fontSize: 20, fontFamily: "Poppins-Regular" }}>SELECT BEAUTICIANIST</Text>}
@@ -220,7 +220,7 @@
                             />
 
 
-                            <View style={{ flex: 1, height: '100%', width:'100%', backgroundColor: "rgba(246, 232, 232, 0.4)", justifyContent: "center" }}>
+                            <View style={{ flex: 1, height: '100%', width:'100%', justifyContent: "center" }}>
 
                                 <ScrollView style={{  }}>
 

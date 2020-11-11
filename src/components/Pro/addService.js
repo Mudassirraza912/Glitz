@@ -34,7 +34,7 @@ export default class AddService extends Component {
         // console.log("email, password, address, name, phoneNo, profilePic", email, password)
 
 
-        fetch("http://soplush.ingicweb.com/soplush/category/category.php?action=select_category", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/category/category.php?action=select_category", {
             method: 'GET',
             // dataType: "json",
             // headers: {
@@ -98,7 +98,7 @@ export default class AddService extends Component {
     //         formData.append("category_id", val.category_id)
     //     }
 // })
-    fetch("http://soplush.ingicweb.com/soplush/beautician/beautician_service.php?action=add_beautician_service", {
+    fetch("http://hnh1.xyz/soplush_new/soplush/beautician/beautician_service.php?action=add_beautician_service", {
         method: 'POST',
         dataType: "json",
         headers: {
@@ -155,7 +155,7 @@ export default class AddService extends Component {
 
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { 
                             
@@ -221,7 +221,7 @@ export default class AddService extends Component {
                                        {!this.state.loader ?     <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%", marginBottom:10, width: "100%" }}>
                                            
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#800', '#000', '#000']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity  onPress={this.addCategory} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10, width:'100%' }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 20, paddingVertical: 15 }}>
                                             OK

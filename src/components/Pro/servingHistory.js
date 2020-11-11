@@ -132,7 +132,7 @@ export default class ServingHistory extends Component {
         formData.append('cart_id', detail.cart_id)
         formData.append('service_id', detail.service_id)
         formData.append('status', value)
-        fetch("http://soplush.ingicweb.com/soplush/cart/cart.php?action=change_cart_service_status", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/cart/cart.php?action=change_cart_service_status", {
                                                 method: 'POST',
                                                 // dataType: "json",
                                                 headers: {
@@ -169,7 +169,7 @@ export default class ServingHistory extends Component {
 
     componentDidMount() {
         console.log('componentDidMount')
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
 
                 }).then(res => res.json())
                     .then(resp => {
@@ -204,7 +204,7 @@ export default class ServingHistory extends Component {
 
     onRefresh = () => {
         this.setState({refreshing:true})
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=accepted`, {
 
                 }).then(res => res.json())
                     .then(resp => {
@@ -263,7 +263,7 @@ export default class ServingHistory extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{height:"100%", width:"100%",}}> 
 
                 <Header
-                        containerStyle={{marginTop:60, backgroundColor:"#fff"}}
+                        containerStyle={{marginTop:60, backgroundColor:"#800", borderBottomWidth:0}}
                         placement="left"
                         leftComponent={<Icon onPress={() => {this.props.navigation.navigate('Main')}} name="arrow-back" color="#000" />}
                         centerComponent={
@@ -334,7 +334,7 @@ export default class ServingHistory extends Component {
                    
                    <View style={{flex: 1 ,justifyContent:"center", alignContent:"center", alignItems:"center", marginTop:20}}>
 {this.state.data.length > 0 ?
-                <View style={{backgroundColor:"#fff",borderRadius:10, width:"90%"}}>
+                <View style={{backgroundColor:"#800",borderRadius:10, width:"90%"}}>
                     {this.state.data.map((value, index) => {
                         console.log('value',value)
                         var date = moment(value.service_date).format('DD/MM/YYYY')
@@ -414,7 +414,7 @@ export default class ServingHistory extends Component {
                                                 </Button>
                                             </LinearGradient> */}
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "100%", borderRadius: 10}}>
+<LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "100%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={() => {this.markAsCompelet('completed', value, index)}}  style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular",  paddingVertical: 15, fontWeight:'bold' }}>
                                             MARK COMPELETE
@@ -438,7 +438,7 @@ export default class ServingHistory extends Component {
                                                 </Button>
                                             </LinearGradient> */}
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+<LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={() => Alert.alert("Alert", "Will be implmented")}  style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10, paddingVertical: 12 }}>
                                         <Icon  name="camera" type="font-awesome" color="#fff" />
                                         </TouchableOpacity>

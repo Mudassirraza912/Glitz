@@ -131,7 +131,7 @@ export default class PersonalService extends Component {
 
   //     // console.log("email, password, address, name, phoneNo, profilePic", email, password)
 
-  // fetch("http://soplush.ingicweb.com/soplush/service/service.php?action=select_service", {
+  // fetch("http://hnh1.xyz/soplush_new/soplush/service/service.php?action=select_service", {
   //     method: 'POST',
   //     // dataType: "json",
   //     headers: {
@@ -306,7 +306,7 @@ export default class PersonalService extends Component {
 
     if (this.state.cart.length > 0) {
       fetch(
-        'http://soplush.ingicweb.com/soplush/customer/search_beautcian.php?action=search_beautician',
+        'http://hnh1.xyz/soplush_new/soplush/customer/search_beautcian.php?action=search_beautician',
         {
           method: 'POST',
           // dataType: "json",
@@ -414,7 +414,7 @@ export default class PersonalService extends Component {
           source={require('../../../assets/inner.png')}
           style={{ height: '100%', width: '100%' }}>
           <Header
-            containerStyle={{ marginTop: 60, backgroundColor: '#fff' }}
+            containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
             placement="left"
             leftComponent={
               <Icon
@@ -546,7 +546,7 @@ export default class PersonalService extends Component {
                     alignContent: 'space-between',
                     borderColor: 'none',
                     borderWidth: 0,
-                    backgroundColor: '#fff',
+                    backgroundColor: '#800',
                   }}>
                   <View
                     style={{ width: '100%', marginLeft: 0, marginRight: 0 }}>
@@ -625,7 +625,7 @@ export default class PersonalService extends Component {
 
                       <View
                         style={{
-                          backgroundColor: '#fff',
+                          backgroundColor: '#800',
                           width: '50%',
                           padding: 15,
                         }}>
@@ -658,7 +658,7 @@ export default class PersonalService extends Component {
                         }}>
                         <View
                           style={{
-                            backgroundColor: '#fff',
+                            backgroundColor: '#800',
                             width: '50%',
                             padding: 15,
                           }}>
@@ -1000,9 +1000,7 @@ export default class PersonalService extends Component {
                           marginTop: '5%',
                         }}>
                         <LinearGradient
-                          start={{ x: 0.0, y: 0.25 }}
-                          end={{ x: 0.0, y: 1.0 }}
-                          colors={['#F9B1B0', '#FD8788', '#FF7173']}
+                          start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']}
                           style={{ width: '90%', borderRadius: 10 }}>
                           <TouchableOpacity
                             onPress={() => this.FilterBeautician()}

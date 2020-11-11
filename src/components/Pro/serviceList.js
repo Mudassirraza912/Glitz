@@ -51,7 +51,7 @@ export default class ServiceList extends Component {
             profileData: this.props.screenProps.profileData
         })
 
-        fetch("http://soplush.ingicweb.com/soplush/category/category.php?action=select_category", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/category/category.php?action=select_category", {
             method: 'GET',
             // dataType: "json",
             // headers: {
@@ -94,7 +94,7 @@ export default class ServiceList extends Component {
 
 
 
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_service.php?action=get_beautician_services&beautician_id=${profileData.user_id}`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_service.php?action=get_beautician_services&beautician_id=${profileData.user_id}`, {
             // method: 'POST',
             // // dataType: "json",
             // headers: {
@@ -149,7 +149,7 @@ export default class ServiceList extends Component {
         // console.log("email, password, address, name, phoneNo, profilePic", email, password)
 
 
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_service.php?action=get_beautician_services&beautician_id=${profileData.user_id}`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_service.php?action=get_beautician_services&beautician_id=${profileData.user_id}`, {
             // method: 'POST',
             // // dataType: "json",
             // headers: {
@@ -244,7 +244,7 @@ export default class ServiceList extends Component {
                 },
                 {text: 'Yes', onPress: () => {
                     
-                    fetch("http://soplush.ingicweb.com/soplush/beautician/beautician_service.php?action=delete_service", {
+                    fetch("http://hnh1.xyz/soplush_new/soplush/beautician/beautician_service.php?action=delete_service", {
                         method: 'POST',
                         dataType: "json",
                         headers: {
@@ -297,7 +297,7 @@ export default class ServiceList extends Component {
                 },
                 {text: 'Yes', onPress: () => {
                     
-                    fetch("http://soplush.ingicweb.com/soplush/beautician/beautician_service.php?action=edit_service", {
+                    fetch("http://hnh1.xyz/soplush_new/soplush/beautician/beautician_service.php?action=edit_service", {
                         method: 'POST',
                         dataType: "json",
                         headers: {
@@ -344,7 +344,7 @@ export default class ServiceList extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{height:"100%", width:"100%"}}> 
 
                 <Header
-                        containerStyle={{marginTop:60, backgroundColor:"#fff"}}
+                        containerStyle={{marginTop:60, backgroundColor:"#800", borderBottomWidth:0}}
                         placement="left"
                         leftComponent={<Icon onPress={() => {this.props.navigation.toggleDrawer()}} name="menu" color="#000" />}
                         centerComponent={<Text style={{alignSelf:'center',fontSize:20, fontFamily:"Poppins-Regular"}}>SERVICES LIST</Text>}
@@ -359,7 +359,7 @@ export default class ServiceList extends Component {
 
                <View style={{flex: 1,alignItems:'center', justifyContent:'center', alignContent:'center', }}>     
 
-              {!this.state.edit ? <View style={{backgroundColor:"#fff", width:"90%",justifyContent:"center", alignContent:"center",borderRadius:10}}>
+              {!this.state.edit ? <View style={{backgroundColor:"#800", width:"90%",justifyContent:"center", alignContent:"center",borderRadius:10}}>
                    
 
             {this.state.services.length > 0 ?   <View style={{flex: 1}}>
@@ -415,7 +415,7 @@ export default class ServiceList extends Component {
             }
 
 <View style={{ alignContent: "center", alignItems: "center",paddingVertical: '5%'}}>
-                                            <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']}  style={{ width: "90%", borderRadius: 5 }}>
+                                            <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']}  style={{ width: "90%", borderRadius: 5 }}>
                                                 <TouchableOpacity onPress={() => {this.setState({renderEMail: false, renderCode: false, renderPassword:false}),
                 this.props.navigation.navigate('Main')}} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 5 }}>
                                                     <Text style={{ alignSelf: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 20, marginTop: -5  }}>
@@ -482,7 +482,7 @@ export default class ServiceList extends Component {
 <View style={{ display: "flex", flexDirection: "row", marginRight: "6%" ,  marginBottom:5}}>
 
 <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%", marginBottom:10,width: '50%' }}>
-                                            <LinearGradient colors={['#fff', '#fc8b8c', '#fc8b8c']} style={{ width: "90%", borderRadius: 10 }}>
+                                            <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10 }}>
                                                 <Button onPress={this.editService} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }}>
                                                     <Text style={{ alignSelf: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17 }}>
                                                         Ok

@@ -127,7 +127,7 @@ export default class BookingReq extends Component {
         const formData = new FormData()
         formData.append("beautician_id", profileData.user_id)
         this.setState({ refreshing: true })
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
 
         }).then(res => res.json())
             .then(resp => {
@@ -166,7 +166,7 @@ export default class BookingReq extends Component {
 
         console.log('profileData.user_id', profileData.user_id)
 
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
 
         }).then(res => res.json())
             .then(resp => {
@@ -221,7 +221,7 @@ export default class BookingReq extends Component {
                                 [
                                     {
                                         text: 'OK', onPress: () => {
-                                            fetch("http://soplush.ingicweb.com/soplush/cart/cart.php?action=change_cart_service_status", {
+                                            fetch("http://hnh1.xyz/soplush_new/soplush/cart/cart.php?action=change_cart_service_status", {
                                                 method: 'POST',
                                                 // dataType: "json",
                                                 headers: {
@@ -243,7 +243,7 @@ export default class BookingReq extends Component {
                                                         this.state.data.splice(index, 1)
                                                         console.log('length index', index)
                                                         this.setState({ services, data })
-                                                        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
+                                                        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
 
                                                         }).then(res => res.json())
                                                             .then(resp => {
@@ -305,7 +305,7 @@ export default class BookingReq extends Component {
                     {
                         text: 'Yes', onPress: () => {
 
-                            fetch("http://soplush.ingicweb.com/soplush/cart/cart.php?action=change_cart_service_status", {
+                            fetch("http://hnh1.xyz/soplush_new/soplush/cart/cart.php?action=change_cart_service_status", {
                                 method: 'POST',
                                 // dataType: "json",
                                 headers: {
@@ -329,7 +329,7 @@ export default class BookingReq extends Component {
 
                                         this.setState({ services, data })
 
-                                        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
+                                        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
 
                                         }).then(res => res.json())
                                             .then(resp => {
@@ -428,7 +428,7 @@ export default class BookingReq extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%", opacity: 0.9 }}>
 
                     <Header
-                        containerStyle={{ marginTop: 60, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.navigate('Main') }} name="arrow-back" color="#000" />}
                         centerComponent={
@@ -499,7 +499,7 @@ export default class BookingReq extends Component {
 
                             <View style={{ flex: 1, justifyContent: "center", alignContent: "center", alignItems: "center", marginTop: 20 }}>
 
-                                {this.state.data.length > 0 ? <View style={{ backgroundColor: "#fff", borderRadius: 10, width: "95%" }}>
+                                {this.state.data.length > 0 ? <View style={{ backgroundColor: '#800', borderRadius: 10, width: "95%" }}>
                                     {this.state.data.map((value, index) => {
                                         var newdate = moment(value.service_date).format('DD-MM-YYYY')
                                         return (
@@ -539,7 +539,7 @@ export default class BookingReq extends Component {
             <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%", marginBottom: 10, width: '50%',marginRight: 15 }}>
 
 
-                <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "97%", borderRadius: 5 }}>
+                <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "97%", borderRadius: 5 }}>
                     <TouchableOpacity onPress={() => { this.changeStatus('accepted', value, index) }} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 5 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 5 }}>
                         <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 10, fontWeight: 'bold' }}>
                             ACCEPT
@@ -550,11 +550,13 @@ export default class BookingReq extends Component {
 
 
             <View style={{ flex: 1, alignContent: "center", alignItems: "center", marginTop: "5%", width: '50%'}}>
-                <TouchableOpacity onPress={() => { this.changeStatus('rejected', value, index) }} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "#fff", width: "100%", borderRadius: 5, opacity: 0.7, borderColor: "#fc8b8c", borderWidth: 1 }}>
-                    <Text style={{ alignSelf: "center", color: "#000", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 10 }}>
+            <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "100%", borderRadius: 5 }}>
+                <TouchableOpacity onPress={() => { this.changeStatus('rejected', value, index) }} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", width: "100%", borderRadius: 5 }}>
+                    <Text style={{ alignSelf: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 10 }}>
                         REJECT
                     </Text>
                 </TouchableOpacity>
+                </LinearGradient>
             </View>
 
         </View>

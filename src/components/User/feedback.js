@@ -39,7 +39,7 @@
 //             console.log("profileData", formData)
     
     
-//             fetch("http://soplush.ingicweb.com/soplush/review_rating/review_rating.php?action=add_review_rating", {
+//             fetch("http://hnh1.xyz/soplush_new/soplush/review_rating/review_rating.php?action=add_review_rating", {
 //                 method: 'POST',
 //                 // dataType: "json",
 //                 headers: {
@@ -187,7 +187,7 @@ export default class Feedback extends Component {
             console.log("profileData", formData)
     
     
-            fetch("http://soplush.ingicweb.com/soplush/review_rating/review_rating.php?action=add_review_rating", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/review_rating/review_rating.php?action=add_review_rating", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -280,7 +280,7 @@ export default class Feedback extends Component {
                                         </Button>
                                     </LinearGradient> */}
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "80%", borderRadius: 10}}>
+<LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "80%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={this.submitReview} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 16, paddingVertical: 15, fontWeight:'bold' }}>
                                             SUBMIT

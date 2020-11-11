@@ -225,7 +225,7 @@ export default class ProSignUp extends Component {
 
     //             console.log("email, password, address, name, phoneNo, profilePic", email, password, address, name, phoneNo, profilePic)
 
-    //         // axios.post("http://soplush.ingicweb.com/soplush/auth/signup.php?action=signup_customer",{
+    //         // axios.post("http://hnh1.xyz/soplush_new/soplush/auth/signup.php?action=signup_customer",{
     //         //     email: email,
     //         //     password: password,
     //         //     address: address,
@@ -248,7 +248,7 @@ export default class ProSignUp extends Component {
 
 
 
-    //         fetch("http://soplush.ingicweb.com/soplush/auth/signup.php?action=signup_beautician", {
+    //         fetch("http://hnh1.xyz/soplush_new/soplush/auth/signup.php?action=signup_beautician", {
     //             method: 'POST',
     //             dataType: "json",
     //             headers: {
@@ -330,7 +330,7 @@ export default class ProSignUp extends Component {
 
                     console.log("email, password, address, name, phoneNo, profilePic", email, password, address, name, phoneNo, profilePic)
 
-                fetch("http://soplush.ingicweb.com/soplush/auth/signup.php?action=signup_beautician", {
+                fetch("http://hnh1.xyz/soplush_new/soplush/auth/signup.php?action=signup_beautician", {
                     method: 'POST',
                     dataType: "json",
                     headers: {
@@ -390,7 +390,7 @@ export default class ProSignUp extends Component {
         }
 
 
-        // axios.post("http://soplush.ingicweb.com/soplush/auth/signup.php?action=signup_customer",{
+        // axios.post("http://hnh1.xyz/soplush_new/soplush/auth/signup.php?action=signup_customer",{
         //     email: email,
         //     password: password,
         //     address: address,
@@ -440,7 +440,7 @@ export default class ProSignUp extends Component {
         } = this.state
         console.log(email, password, name, address, phoneNo, bank, accountNo)
         return (
-            <View style={{ flex: 1, height: '100%', width: '100%', marginTop: -80 }}>
+            <View style={{ flex: 1, height: '100%', width: '100%' }}>
                 <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%" }}>
 
                     <ScrollView  keyboardShouldPersistTaps='always' style={{ height: height }}>
@@ -455,7 +455,7 @@ export default class ProSignUp extends Component {
 
 
 
-                            <View style={{ marginTop: "5%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "80%", backgroundColor: "#fff", borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', padding: "5%" }}>
+                            <View style={{ marginTop: "5%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "80%", backgroundColor: '#800', borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', padding: "5%" }}>
 
                                 <View style={{ marginVertical: 5 }}>
                                     <Text style={{ fontFamily: "Poppins-Regular", fontSize: 20, fontWeight: '600' }}>CREATE ACCOUNT</Text>
@@ -742,7 +742,7 @@ export default class ProSignUp extends Component {
                                     //                             </View>
 
                                     <View style={{ alignContent: "center", alignItems: "center", width: '100%', paddingVertical: '5%' }}>
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "100%", borderRadius: 10 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "100%", borderRadius: 10 }}>
                                             <TouchableOpacity onPress={this.signUp} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }}>
                                                 <Text style={{ alignSelf: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: '7%', marginTop: -5 , fontWeight:'bold'}}>
                                                     SIGN UP

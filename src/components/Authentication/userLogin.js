@@ -75,7 +75,7 @@ export default class UserLogin extends Component {
                 console.log("email, password, address, name, phoneNo, profilePic", formData)
 
 
-            fetch("http://soplush.ingicweb.com/soplush/auth/login.php?action=signin", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/auth/login.php?action=signin", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -246,7 +246,7 @@ export default class UserLogin extends Component {
 
     // console.log("BEFORE SUCCSSS", `https://churppy.com/api/v1/google-login?provider_email=${e.email}&provider_name=${e.name}&id=${e.id}&token=${token}&avtar_origional=${e.photo}`)
 
-    fetch("http://soplush.ingicweb.com/soplush/auth/login.php?action=signin", {
+    fetch("http://hnh1.xyz/soplush_new/soplush/auth/login.php?action=signin", {
     method: 'POST',
     // dataType: "json",
     headers: {
@@ -314,10 +314,10 @@ export default class UserLogin extends Component {
      }
 
     // console.log("BEFORE SUCCSSS", `https://churppy.com/api/v1/google-login?provider_email=${e.email}&provider_name=${e.name}&id=${e.id}&token=${token}&avtar_origional=${e.photo}`)
-
+    // "http://soplush.ingicweb.com/soplush/auth/login.php?action=signin",
     console.log('connectFacebookAuthWithDb formData', formData)
 
-    fetch("http://soplush.ingicweb.com/soplush/auth/login.php?action=signin", {
+    fetch("http://hnh1.xyz/soplush_new/soplush/auth/login.php?action=signin", {
     method: 'POST',
     // dataType: "json",
     headers: {
@@ -370,7 +370,7 @@ export default class UserLogin extends Component {
         console.log(email, password)
         return (
             <View style={{ flex: 1, height: "100%", width: '100%', marginTop: -80 }}>
-                <ImageBackground source={require('../../../assets/login.png')} style={{ height: "100%", width: "100%" }}>
+                <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%" }}>
                     <View style={{ width: '100%', height: '100%' }}>
                         <ScrollView keyboardShouldPersistTaps='always'>
                         <Animated.View style={[{ justifyContent: 'center', alignItems: "center" }, { transform: [{ translateY: this.state.shift }] }]} >
@@ -381,11 +381,11 @@ export default class UserLogin extends Component {
                                     </View>
 
                                     <View style={{ marginTop: "10%", width: '80%', padding: 5 }}>
-                                        <Text style={{ fontFamily: "Poppins-Regular", fontSize: 20, fontWeight: '600', }}>Sign In</Text>
-                                        <Text style={{ fontFamily: "Poppins-Regular", marginTop: "4%", opacity: 0.6 }}>Sign in with your email ID and Password</Text>
+                                        <Text style={{ fontFamily: "Poppins-Regular", fontSize: 20, fontWeight: '600', color:'#9d7e2c' }}>Sign In</Text>
+                                        <Text style={{ fontFamily: "Poppins-Regular", marginTop: "4%", opacity: 0.9,color:'#9d7e2c' }}>Sign in with your email ID and Password</Text>
                                     </View>
 
-                                    <View style={{ marginTop: "5%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "80%", backgroundColor: "#fff", borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "1%", overflow: "hidden" }}>
+                                    <View style={{ marginTop: "5%", alignContent: "center", alignSelf: "center", alignItems: "center", width: "80%", backgroundColor: '#9d7e2c', borderRadius: 10, shadowOpacity: 1, elevation: 4, shadowRadius: 20, shadowOffset: { width: 0, height: 13 }, shadowColor: 'rgba(46, 229, 157, 0.4)', paddingVertical: "1%", overflow: "hidden" }}>
                                         {/* // Text input box with icon aligned to the left */}
                                         <View >
                                             
@@ -434,14 +434,14 @@ export default class UserLogin extends Component {
 
                                     <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%", paddingVertical: 10 }}>
                                         <TouchableOpacity onPress={() => { this.props.navigation.navigate("ForgotPassword", { from: "UserLogin" }) }}>
-                                            <Text style={{ fontFamily: 'Poppins-Regular', opacity: 0.6 }}>Forgot Password?</Text>
+                                            <Text style={{ fontFamily: 'Poppins-Regular', color:'#9d7e2c'}}>Forgot Password?</Text>
                                         </TouchableOpacity>
                                     </View>
 
                                     {!loader ? <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%" }}>
                                      
 
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "95%", borderRadius: 5 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "95%", borderRadius: 5 }}>
                                             <TouchableOpacity onPress={this.login} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                                 <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15, fontWeight: 'bold' }}>
                                                     LOGIN
@@ -453,14 +453,14 @@ export default class UserLogin extends Component {
                                     }
 
                                     <View style={{ alignContent: "center", alignItems: "center", paddingVertical: 10 }}>
-                                        <Text style={{ fontFamily: 'Poppins-Regular', opacity: 0.6 }}>Or Sign Up Using</Text>
+                                        <Text style={{ fontFamily: 'Poppins-Regular', color:'#9d7e2c' }}>Or Sign Up Using</Text>
                                     </View>
 
 
                                     <View style={{ display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center", marginTop: "5%", justifyContent: "space-between", width: '80%', alignSelf: 'center' }}>
 
 
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#c79de0', '#883cb6', '#883cb6']} style={{ width: "48%", borderRadius: 5 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "48%", borderRadius: 5 }}>
                                             <TouchableOpacity 
                                             // onPress={this.fbLogin}
                                             onPress={() => {
@@ -476,7 +476,7 @@ export default class UserLogin extends Component {
                                         </LinearGradient>
 
 
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "48%", borderRadius: 5 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "48%", borderRadius: 5 }}>
                                             <TouchableOpacity onPress={() => {
                                                 this.google()
                                                 // this.signInAsync()
@@ -493,11 +493,11 @@ export default class UserLogin extends Component {
 
                                     <View style={{ display: "flex", flexDirection: "row", alignContent: "center", alignItems: "center", marginTop: "5%", justifyContent: "center", paddingVertical: 10 }}>
 
-                                        <Text style={{ alignSelf: "center", fontFamily: "Poppins-Regular", opacity: 0.6 }}>
+                                        <Text style={{ alignSelf: "center", fontFamily: "Poppins-Regular",color:'#9d7e2c'}}>
                                             New to Soplush Beauty?
                     </Text>
                                         <TouchableOpacity onPress={() => { this.props.navigation.navigate("UserSignUp") }} style={{ marginLeft: "3%" }}>
-                                            <Text style={{ alignSelf: "center", color: "#fc8b8c", fontFamily: "Poppins-Regular", borderBottomWidth: 1, borderBottomColor: "#fc8b8c" }}>Create Account</Text>
+                                            <Text style={{ alignSelf: "center",color:'#9d7e2c', fontFamily: "Poppins-Regular", borderBottomWidth: 1, borderBottomColor: "#9d7e2c" }}>Create Account</Text>
                                         </TouchableOpacity>
 
                                         

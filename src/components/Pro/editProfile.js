@@ -241,7 +241,7 @@ export default class EditProProfile extends Component {
         console.log('FORM FORMDATA DATA', formData)
 
 
-        fetch("http://soplush.ingicweb.com/soplush/user/user.php?action=update_profile", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/user/user.php?action=update_profile", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -302,7 +302,7 @@ export default class EditProProfile extends Component {
 
               
                 <Header
-                        containerStyle={{marginTop:40, backgroundColor:"#fff"}}
+                        containerStyle={{marginTop:40, backgroundColor:"#800", borderBottomWidth:0}}
                         placement="left"
                         leftComponent={<Icon onPress={() => {
                             this.setState({
@@ -334,13 +334,13 @@ export default class EditProProfile extends Component {
 
                 {/* <View style={{backgroundColor:"#fff",borderRadius:10, width:"90%"}}> */}
                    
-                        <View style={{backgroundColor:"#fff", borderRadius:10, width:"90%", padding: 10}}> 
+                        <View style={{backgroundColor:"#800", borderRadius:10, width:"90%", padding: 10}}> 
 
                        {!this.state.profilePic ?
                        
                        <View>
                       {(this.props.screenProps.profileData.profile_pic !== "" && this.props.screenProps.profileData.profile_pic !== null) ? <View style={{justifyContent:"center", alignContent:"center", alignItems:"center", paddingVertical:15, marginBottom:10}}>
-                             <Avatar  onPress={this.openGallery} onEditPress={this.openGallery} containerStyle={{backgroundColor:"#fc8b8c",}} showEditButton  rounded size="xlarge" editButton={{name:"camera",type:"font-awesome", size:25, iconStyle:{marginTop:10} ,containerStyle:{backgroundColor:"#fc8b8c", borderRadius:50, height: 45, width: 45, borderColor:'#fff' , borderWidth:2 ,marginRight:60}, color:"#fff", underlayColor:"#fc8b8c", reverseColor:"#fc8b8c", }}  source={{uri:`http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
+                             <Avatar  onPress={this.openGallery} onEditPress={this.openGallery} containerStyle={{backgroundColor:"#fc8b8c",}} showEditButton  rounded size="xlarge" editButton={{name:"camera",type:"font-awesome", size:25, iconStyle:{marginTop:10} ,containerStyle:{backgroundColor:"#fc8b8c", borderRadius:50, height: 45, width: 45, borderColor:'#fff' , borderWidth:2 ,marginRight:60}, color:"#fff", underlayColor:"#fc8b8c", reverseColor:"#fc8b8c", }}  source={{uri:`http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
                         </View> : 
                        <View style={{justifyContent:"center", alignContent:"center", alignItems:"center", paddingVertical:15, marginBottom:10}}>
                         <Avatar  onPress={this.openGallery} onEditPress={this.openGallery} containerStyle={{backgroundColor:"#fc8b8c",}} showEditButton  rounded size="xlarge" editButton={{name:"camera",type:"font-awesome", size:25, iconStyle:{marginTop:10} ,containerStyle:{backgroundColor:"#fc8b8c", borderRadius:50, height: 45, width: 45, borderColor:'#fff' , borderWidth:2 ,marginRight:60}, color:"#fff", underlayColor:"#fc8b8c", reverseColor:"#fc8b8c", }}  source={defaultImage} />
@@ -484,7 +484,7 @@ export default class EditProProfile extends Component {
 </Text>
                                                 </Button>
                                             </LinearGradient> */}
-                                              <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+                                              <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={() => {this.updateProfile()}} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 15 }}>
                                             OK

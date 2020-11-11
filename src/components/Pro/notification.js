@@ -78,7 +78,7 @@ export default class Notification extends Component {
         const {profileData} = this.state
         const formData = new FormData()
         formData.append("common_id",profileData.user_id)
-        fetch("http://soplush.ingicweb.com/soplush/notification/notification_api.php?action=get_notification", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/notification/notification_api.php?action=get_notification", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -133,7 +133,7 @@ export default class Notification extends Component {
           subtitleStyle={{color:"red", fontFamily:"Poppins-Regular", textAlignVertical: "bottom", marginTop: 8}}
           leftAvatar={{
             // source: item.icon &&  item.icon ,
-            source:{uri: `http://soplush.ingicweb.com/soplush/profile_pics/${item.profile_pic}`},
+            source:{uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${item.profile_pic}`},
             titleStyle:{fontFamily:"Poppins-Regular"},
             // title: item.data[0],
             rounded:false,
@@ -154,10 +154,10 @@ export default class Notification extends Component {
     render() {
         return (
             <View style={{flex:1, height:'100%', width:'100%', marginTop: -80}}>
-                <ImageBackground source={require('../../../assets/opacity100.png')} style={{height:"100%", width:"100%",opacity:0.9}}> 
+                <ImageBackground source={require('../../../assets/inner.png')} style={{height:"100%", width:"100%",opacity:0.9}}> 
 
                 <Header
-                    containerStyle={{marginTop:60, backgroundColor:"#fff"}}
+                    containerStyle={{marginTop:60, backgroundColor:"#800", borderBottomWidth: 0}}
                     placement="left"
                     leftComponent={<Icon onPress={() => {this.props.navigation.navigate('Main')}} name="arrow-back" color="#000" />}
                     centerComponent={<Text style={{alignSelf:"center",fontSize:20, fontFamily:"Poppins-Regular"}}>NOTIFICATIONS</Text>}
@@ -166,7 +166,7 @@ export default class Notification extends Component {
 
 
 
-                <View style={{flex: 1 ,height:'100%', width:'100%', backgroundColor:"rgba(246, 232, 232, 0.7)",justifyContent:"center"}}>
+                <View style={{flex: 1 ,height:'100%', width:'100%',justifyContent:"center"}}>
 
                 <ScrollView style={{height: height}}>
 

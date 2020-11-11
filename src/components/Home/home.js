@@ -154,7 +154,7 @@ export default class Home extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%" }}>
                     <Header
                         // leftComponent={<Icon name="arrow-back" color="#000" onPress={this.handleClose} />}
-                        containerStyle={{ marginTop: 60, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         centerComponent={<Text style={{ alignSelf: 'center', fontSize: 20, fontFamily: "Poppins-Regular" }}>HOME</Text>}
                     />

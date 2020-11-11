@@ -350,7 +350,7 @@ export default class BookingHistory extends Component {
 
 
     componentDidMount() {
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
 
                 }).then(res => res.json())
                     .then(resp => {
@@ -421,7 +421,7 @@ export default class BookingHistory extends Component {
 
     onRefresh = () => {
         this.setState({refreshing: true})
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
 
         }).then(res => res.json())
             .then(resp => {
@@ -568,7 +568,7 @@ export default class BookingHistory extends Component {
                    
                    <View style={{flex: 1 ,justifyContent:"center", alignContent:"center", alignItems:"center", marginTop:20}}>
 
-              {this.state.data.length > 0 ?  <View style={{ backgroundColor: "#fff", borderRadius: 20, width: "100%"}}>
+              {this.state.data.length > 0 ?  <View style={{ backgroundColor: '#800', borderRadius: 20, width: "100%"}}>
                     {this.state.data.map((value, index) => {
                         // console.log('VALUE VALUE VALUE', value)
                         var formatDate = `${moment(value.service_date).format('dddd')} - ${ moment(value.service_date).format('DD/MM/YYYY')}`

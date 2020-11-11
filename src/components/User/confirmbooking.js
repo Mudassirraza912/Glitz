@@ -95,7 +95,7 @@ export default class ConfirmBooking extends Component {
         // console.log("formData formData", formData, formmatedDate)
 
 
-        fetch("http://soplush.ingicweb.com/soplush/cart/cart.php?action=add_cart", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/cart/cart.php?action=add_cart", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -119,7 +119,7 @@ export default class ConfirmBooking extends Component {
                     bookingFormData.append('service_date', selectdate)
                     console.log('bookingFormData', bookingFormData)
 
-                    fetch("http://soplush.ingicweb.com/soplush/booking/booking.php?action=add_booking", {
+                    fetch("http://hnh1.xyz/soplush_new/soplush/booking/booking.php?action=add_booking", {
                         method: 'POST',
                         // dataType: "json",
                         headers: {
@@ -177,7 +177,7 @@ export default class ConfirmBooking extends Component {
 
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.goBack() }} name="arrow-back" color="#000" />}
                         centerComponent={<Text style={{alignSelf:'center',fontSize: 20, fontFamily: "Poppins-Regular" }}>CONFIRM BOOKING</Text>}
@@ -194,7 +194,7 @@ export default class ConfirmBooking extends Component {
 
                                 {/* <View style={{backgroundColor:"#fff",borderRadius:10, width:"90%"}}> */}
 
-                                <View style={{ backgroundColor: "#fff", borderRadius: 10, width: "90%", padding:10, paddingHorizontal:"5%"}}>
+                                <View style={{ backgroundColor: '#800', borderRadius: 10, width: "90%", padding:10, paddingHorizontal:"5%"}}>
 
                                     
 
@@ -313,7 +313,7 @@ export default class ConfirmBooking extends Component {
 //                                         </View>
 
 <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%" }}>
-                                    <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "100%", borderRadius: 10}}>
+                                    <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "100%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={() => { 
                                             var amount = 0
                                             cart.map((value) => {

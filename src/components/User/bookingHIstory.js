@@ -122,7 +122,7 @@ export default class BookingHistory extends Component {
 
     componentDidMount() {
         console.log('this.props.screenProps.profileData.user_id', this.props.screenProps.profileData.user_id)
-        fetch(`http://soplush.ingicweb.com/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
 
                 }).then(res => res.json())
                     .then(resp => {
@@ -152,7 +152,7 @@ export default class BookingHistory extends Component {
 
     onRefresh = () => {
         this.setState({refreshing: true})
-        fetch(`http://soplush.ingicweb.com/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/user/user.php?action=get_user_bookings&user_id=${this.props.screenProps.profileData.user_id}`, {
 
         }).then(res => res.json())
             .then(resp => {
@@ -219,7 +219,7 @@ export default class BookingHistory extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{height:"100%", width:"100%"}}> 
 
                 <Header
-                        containerStyle={{marginTop:60, backgroundColor:"#fff"}}
+                        containerStyle={{marginTop:60, backgroundColor:"#800", borderBottomWidth:0}}
                         placement="left"
                         leftComponent={<Icon onPress={() => {this.props.navigation.navigate('UserHome')}} name="arrow-back" color="#000" />}
                         centerComponent={
@@ -289,7 +289,7 @@ export default class BookingHistory extends Component {
 
                 <View style={{flex: 1 , backgroundColor:"#fff",borderRadius:20, width:"90%"}}>
 
-                {this.state.data.length > 0 ?       <View style={{ backgroundColor: "#fff", width: "100%", borderRadius:20}}> 
+                {this.state.data.length > 0 ?       <View style={{ backgroundColor: '#800', width: "100%", borderRadius:20}}> 
                     {this.state.data.map((value, index) => {
                         var index = index + 1
                         var dataLength = this.state.data.length
@@ -299,7 +299,7 @@ export default class BookingHistory extends Component {
                         if( index === 1){
 
                             return(
-                                <View key={index} style={{backgroundColor:'#fff', padding: 10, borderTopLeftRadius: 20, borderTopRightRadius: 20}}> 
+                                <View key={index} style={{backgroundColor: '#800', padding: 10, borderTopLeftRadius: 20, borderTopRightRadius: 20}}> 
         
                                    <View style={{display:"flex", flexDirection:"row", paddingVertical:"5%", justifyContent:'space-between'}}> 
                                             <Text style={{fontFamily:"Poppins-Regular", color:"#ff8385", fontSize:17}}>{formatDate}</Text>
@@ -346,7 +346,7 @@ export default class BookingHistory extends Component {
                         }else {
 
                             return(
-                                <View key={index} style={index === dataLength ? {backgroundColor:'#fff', padding: 10, borderBottomLeftRadius: 20, borderBottomRightRadius: 20} : {backgroundColor:'#fff', padding: 10}}> 
+                                <View key={index} style={index === dataLength ? {backgroundColor: '#800', padding: 10, borderBottomLeftRadius: 20, borderBottomRightRadius: 20} : {backgroundColor: '#800', padding: 10}}> 
         
                                    <View style={{display:"flex", flexDirection:"row", paddingVertical:"5%", justifyContent:'space-between'}}> 
                                             <Text style={{fontFamily:"Poppins-Regular", color:"#ff8385", fontSize:17}}>{formatDate}</Text>

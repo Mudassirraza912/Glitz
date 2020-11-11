@@ -81,7 +81,7 @@
 //         console.log("profileData", formData)
 
 
-//         fetch("http://soplush.ingicweb.com/soplush/user/user.php?action=update_profile", {
+//         fetch("http://hnh1.xyz/soplush_new/soplush/user/user.php?action=update_profile", {
 //             method: 'POST',
 //             // dataType: "json",
 //             headers: {
@@ -181,7 +181,7 @@
 //                         <Card containerStyle={{backgroundColor:"#fff", borderRadius:10, width:"90%",}}> 
 
 //                         {!this.state.profilePic ? <View style={{justifyContent:"center", alignContent:"center", alignItems:"center"}}>
-//                              <Avatar  editButton={{name:"camera",type:"font-awesome", size:25, iconStyle:{marginTop:10} ,containerStyle:{backgroundColor:"#fc8b8c", borderRadius:50, height: 45, width: 45, borderColor:'#fff' , borderWidth:2 ,marginRight:60}, color:"#fff", underlayColor:"#fc8b8c", reverseColor:"#fc8b8c", }}  onPress={this.openGallery} onEditPress={this.openGallery} containerStyle={{backgroundColor:"#fc8b8c",}} showEditButton  rounded size="xlarge" source={{uri:`http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
+//                              <Avatar  editButton={{name:"camera",type:"font-awesome", size:25, iconStyle:{marginTop:10} ,containerStyle:{backgroundColor:"#fc8b8c", borderRadius:50, height: 45, width: 45, borderColor:'#fff' , borderWidth:2 ,marginRight:60}, color:"#fff", underlayColor:"#fc8b8c", reverseColor:"#fc8b8c", }}  onPress={this.openGallery} onEditPress={this.openGallery} containerStyle={{backgroundColor:"#fc8b8c",}} showEditButton  rounded size="xlarge" source={{uri:`http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
 //                         </View> 
 //                         :
 //                         <View style={{justifyContent:"center", alignContent:"center", alignItems:"center"}}>
@@ -236,7 +236,7 @@
 //                                                 </Button>
 //                                             </LinearGradient> */}
 
-// <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "100%", borderRadius: 10}}>
+// <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#800', '#000', '#000']} style={{ width: "100%", borderRadius: 10}}>
 //                                         <TouchableOpacity onPress={() => {this.updateProfile()}}style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
 //                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 15, paddingVertical: 15 }}>
 //                                             UPDATE
@@ -352,7 +352,7 @@ export default class ProProfile extends Component {
 
               
                 <Header
-                        containerStyle={{marginTop:40, backgroundColor:"#fff"}}
+                        containerStyle={{marginTop:40, backgroundColor:"#800", borderBottomWidth: 0}}
                         placement="left"
                         leftComponent={<Icon onPress={() => {this.props.navigation.navigate('UserHome')}} name="arrow-back" color="#000" />}
                         centerComponent={<Text style={{alignSelf:"center", fontSize:20, fontFamily:"Poppins-Regular"}}>PROFILE</Text>}
@@ -368,13 +368,13 @@ export default class ProProfile extends Component {
 
                 {/* <View style={{backgroundColor:"#fff",borderRadius:10, width:"90%"}}> */}
                    
-                        <View style={{backgroundColor:"#fff", borderRadius:10, width:"90%",padding:0, marginTop:"10%"}}> 
+                        <View style={{backgroundColor:"#800", borderRadius:10, width:"90%",padding:0, marginTop:"10%"}}> 
                             {/* <View style={{width:"100%"}}>
-                                <Image resizeMode="cover" style={{width:"100%", height:300}} source={{uri:`http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
+                                <Image resizeMode="cover" style={{width:"100%", height:300}} source={{uri:`http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} />
                             </View> */}
                           {(this.props.screenProps.profileData.profile_pic !== "" && this.props.screenProps.profileData.profile_pic !== null) ? 
                           <View style={{ width: "100%", marginLeft: 0, marginRight: 0, borderRadius: 10 }}>
-                                            <Image source={{uri:`http://soplush.ingicweb.com/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} style={{ height: 200, width: "100%", borderTopRightRadius: 10, borderTopLeftRadius: 10 }} />
+                                            <Image source={{uri:`http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.props.screenProps.profileData.profile_pic}`}} style={{ height: 200, width: "100%", borderTopRightRadius: 10, borderTopLeftRadius: 10 }} />
                                         </View>
                                         
                                     :
@@ -431,7 +431,7 @@ export default class ProProfile extends Component {
                                             </LinearGradient> */}
 
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10}}>
+<LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10}}>
                                         <TouchableOpacity onPress={() => {this.props.navigation.navigate('UserHome')}} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 10 , fontWeight:'bold'}}>
                                             OK

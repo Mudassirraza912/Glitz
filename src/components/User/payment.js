@@ -102,7 +102,7 @@ export default class Payment extends Component {
 
           console.log("FORMDATA", formData)
 
-          fetch("http://soplush.ingicweb.com/api/payment/charge.php", {
+          fetch("http://hnh1.xyz/soplush_new/api/payment/charge.php", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -153,7 +153,7 @@ export default class Payment extends Component {
         // console.log("formData formData", formData, formmatedDate)
 
 
-        fetch("http://soplush.ingicweb.com/soplush/cart/cart.php?action=add_cart", {
+        fetch("http://hnh1.xyz/soplush_new/soplush/cart/cart.php?action=add_cart", {
             method: 'POST',
             // dataType: "json",
             headers: {
@@ -179,7 +179,7 @@ export default class Payment extends Component {
 
                     console.log('bookingFormData', bookingFormData)
 
-                    fetch("http://soplush.ingicweb.com/soplush/booking/booking.php?action=add_booking", {
+                    fetch("http://hnh1.xyz/soplush_new/soplush/booking/booking.php?action=add_booking", {
                         method: 'POST',
                         // dataType: "json",
                         headers: {
@@ -278,17 +278,17 @@ export default class Payment extends Component {
         console.log("totalAmount" , totalAmount)
         return (
             <View style={{ flex: 1, height:'100%', width:'100%', marginTop: -80 }}>
-                <ImageBackground source={require('../../../assets/opacity100.png')} style={{ height: "100%", width: "100%", opacity: 0.9, marginTop: 20 }}>
+                <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%", opacity: 0.9, marginTop: 20 }}>
 
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.goBack() }} name="arrow-back" color="#000" />}
                         centerComponent={<Text style={{alignSelf:'center',fontSize: 20, fontFamily: "Poppins-Bold_0" }}>PAYMENT</Text>}
                     />
 
-                    <View style={{flex: 1, height:'100%', width:'100%', backgroundColor: "rgba(246, 232, 232, 0.7)"}}>
+                    <View style={{flex: 1, height:'100%', width:'100%'}}>
 
                         <ScrollView style={{ height: '100%' }}>
 
@@ -344,7 +344,7 @@ export default class Payment extends Component {
 
                                 <View style={{ alignContent: "center", alignItems: "center", marginTop: "5%", marginBottom:20 }}>
 
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "80%", borderRadius: 5 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "80%", borderRadius: 5 }}>
                                             <TouchableOpacity onPress={() => this.onSubmit()} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 10 }}>
                                                 <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 15, fontWeight: 'bold' }}>
                                                     PROCEED TO PAYMENT

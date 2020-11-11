@@ -63,7 +63,7 @@ const { width, height } = Dimensions.get("window")
             // console.log("email, password, address, name, phoneNo, profilePic", email, password)
 
 
-            fetch("http://soplush.ingicweb.com/soplush/category/category.php?action=select_category", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/category/category.php?action=select_category", {
                 method: 'GET',
                 // dataType: "json",
                 // headers: {
@@ -136,7 +136,7 @@ const { width, height } = Dimensions.get("window")
             // this.props.navigation.navigate(this.state.navigate)
             // this.props.navigation.navigate(this.state.navigate, {
             //     category_id: item.category_id,
-            //     image: `http://soplush.ingicweb.com/soplush/images/${item.image}`,
+            //     image: `http://hnh1.xyz/soplush_new/soplush/images/${item.image}`,
             //     service: successData.data
 
             // })
@@ -144,7 +144,7 @@ const { width, height } = Dimensions.get("window")
             //   Alert.alert("Login successful")
             // this.props.navigation.navigate("Main")
 
-            fetch("http://soplush.ingicweb.com/soplush/service/service.php?action=select_service", {
+            fetch("http://hnh1.xyz/soplush_new/soplush/service/service.php?action=select_service", {
                 method: 'POST',
                 // dataType: "json",
                 headers: {
@@ -162,7 +162,7 @@ const { width, height } = Dimensions.get("window")
                         console.log(" successData.data PRO", successData.data, item.category_name)
                         this.props.navigation.navigate(this.state.navigate, {
                             category_id: item.category_id,
-                            image: `http://soplush.ingicweb.com/soplush/images/${item.image}`,
+                            image: `http://hnh1.xyz/soplush_new/soplush/images/${item.image}`,
                             service: successData.data,
                             category_name: item.category_name
 
@@ -208,9 +208,9 @@ const { width, height } = Dimensions.get("window")
         const { items } = this.state
         return (
             <View style={{ flex: 1, height: '100%', width:'100%' , marginTop: -80 }}>
-
+              <ImageBackground source={require('../../../assets/homeback.png')} style={{height:"100%", width:"100%"}}> 
                 <Header
-                    containerStyle={{ marginTop: 60, backgroundColor: "rgb(255,239,241)" }}
+                    containerStyle={{ marginTop: 60, backgroundColor: "#800", borderBottomWidth:0 }}
                     placement="left"
                     leftComponent={
                     <TouchableOpacity onPress={() => {Keyboard.dismiss(), this.props.navigation.toggleDrawer() }}>
@@ -276,18 +276,18 @@ const { width, height } = Dimensions.get("window")
                 />
 
 
-                <View style={{ flex: 1, backgroundColor: "rgb(255,239,241)", justifyContent: "center" }}>
+                <View style={{ flex: 1,  justifyContent: "center" }}>
 
 
 
                     <ScrollView >
 
-                        <View style={{ alignSelf: "center", alignContent: "center", alignItems: "center", backgroundColor: "#fff", width: '100%' }}>
+                        <View style={{ alignSelf: "center", alignContent: "center", alignItems: "center", backgroundColor: '#800', width: '100%' }}>
                             <Image source={require('../../../assets/Cover.png')} style={{ opacity: 2, width: '100%' }} />
                         </View>
 
                         <View style={{ width: width, marginVertical: "2%", marginLeft: "5%" }}>
-                            <Text style={{ fontSize: 16, fontFamily: "Poppins-Regular", fontWeight: "bold" }}>SERVICES</Text>
+                            <Text style={{ fontSize: 16, fontFamily: "Poppins-Regular", fontWeight: "bold", color:'#fff' }}>SERVICES</Text>
                         </View>
 
 
@@ -328,12 +328,12 @@ const { width, height } = Dimensions.get("window")
                             <FlatList style={{ flex: 1 }}
                                 data={this.state.data}
                                 renderItem={({ item }) => {
-                                    console.log("FlatList FlatList", `http://soplush.ingicweb.com/soplush/images/${item.image}`)
+                                    console.log("FlatList FlatList", `http://hnh1.xyz/soplush_new/soplush/images/${item.image}`)
                                     return (<View style={{ flexDirection: "column", marginVertical: 6, height: '90%', width: "50%", alignContent: "center", alignItems: "center", alignSelf: "center", }}>
                                         <TouchableOpacity style={{width:'100%'}} onPress={() => this.navigatingToOther(item)}>
-                                            <Image style={styles.imageThumbnail} source={{ uri: `http://soplush.ingicweb.com/soplush/images/${item.image}` }} />
+                                            <Image style={styles.imageThumbnail} source={{ uri: `http://hnh1.xyz/soplush_new/soplush/images/${item.image}` }} />
                                         </TouchableOpacity>
-                                        <Text style={{ fontSize: 17, color: "#000", opacity: 0.6, fontFamily: "Poppins-Regular", textTransform: 'capitalize', fontWeight:'900', marginVertical:5 }}>{item.category_name}</Text>
+                                        <Text style={{ fontSize: 17, color: "#fff", opacity: 0.6, fontFamily: "Poppins-Regular", textTransform: 'capitalize', fontWeight:'900', marginVertical:5 }}>{item.category_name}</Text>
                                     </View>
                                     )
                                 }
@@ -350,6 +350,7 @@ const { width, height } = Dimensions.get("window")
 
                     </ScrollView>
                 </View>
+                </ImageBackground>
             </View>
         )
     }

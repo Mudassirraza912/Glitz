@@ -55,7 +55,7 @@ export default class BookingDetail extends Component {
                 <ImageBackground source={require('../../../assets/map.png')} style={{ height: "100%", width: "100%", opacity: 0.9, marginTop: 20 }}>
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800' }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.navigate('BookingReq') }} name="arrow-back" color="#000" />}
                         centerComponent={<Text style={{ alignSelf: 'center', fontSize: 20, fontFamily: "Poppins-Regular" }}>BOOKING DETAILS</Text>}
@@ -69,7 +69,7 @@ export default class BookingDetail extends Component {
 
                         <View style={{ justifyContent: "center", alignContent: "center", alignItems: "center", marginTop: 20 }}>
 
-                            <View style={{ backgroundColor: "#fff", borderRadius: 10, width: "90%" }}>
+                            <View style={{ backgroundColor: '#800', borderRadius: 10, width: "90%" }}>
 
                                 <View style={{ borderColor: "none", borderWidth: 0, borderRadius: 10, marginLeft: 10, paddingVertical: 20 }}>
 
@@ -129,7 +129,7 @@ export default class BookingDetail extends Component {
                                     </LinearGradient> */}
 
 
-                                        <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "95%", borderRadius: 5 }}>
+                                        <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "95%", borderRadius: 5 }}>
                                             <TouchableOpacity onPress={() => this.props.navigation.navigate('BookingReq')} style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 10, alignSelf: "center" , width:'100%'}} >
                                                 <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", paddingVertical: 10, fontWeight:'bold' }}>
                                                     OK

@@ -66,7 +66,7 @@ class ProHome extends Component {
             <View style={{ flex: 1, height: '100%', width: '100%', marginTop: -80 }}>
                 <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%" }}>
 
-                    {/* <Header  style={{backgroundColor: '#fff', marginTop:80}}>
+                    {/* <Header  style={{backgroundColor: '#800', marginTop:80}}>
 
              <View style={{display:"flex", flexDirection:"row"}}>
     
@@ -94,7 +94,7 @@ class ProHome extends Component {
 
 
                     <Header
-                        containerStyle={{ marginTop: 60, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.toggleDrawer() }} name="menu" color="#000" />}
                         centerComponent={<Text style={{ alignSelf: 'center', fontSize: 20, fontFamily: "Poppins-Regular" }}>HOME</Text>}

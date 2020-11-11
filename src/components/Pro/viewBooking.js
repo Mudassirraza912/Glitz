@@ -113,7 +113,7 @@
 
 
 //     componentDidMount() {
-//         fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
+//         fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
 
 //                 }).then(res => res.json())
 //                     .then(resp => {
@@ -183,7 +183,7 @@
 
 //     onRefresh = () => {
 //         this.setState({refreshing: true})
-//         fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
+//         fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${this.props.screenProps.profileData.user_id}&status=completed`, {
 
 //         }).then(res => res.json())
 //             .then(resp => {
@@ -526,7 +526,7 @@ export default class ViewBooking extends Component {
 
         console.log('profileData.user_id', profileData.user_id)
 
-        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
+        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=pending`, {
 
         }).then(res => res.json())
             .then(resp => {
@@ -580,7 +580,7 @@ export default class ViewBooking extends Component {
                                 [
                                     {
                                         text: 'OK', onPress: () => {
-                                            fetch("http://soplush.ingicweb.com/soplush/booking/booking.php?action=change_booking_status", {
+                                            fetch("http://hnh1.xyz/soplush_new/soplush/booking/booking.php?action=change_booking_status", {
                                                 method: 'POST',
                                                 // dataType: "json",
                                                 headers: {
@@ -602,7 +602,7 @@ export default class ViewBooking extends Component {
                                                         this.state.data.splice(index, 1)
 
                                                         this.setState({ services, data })
-                                                        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
+                                                        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
 
                                                         }).then(res => res.json())
                                                             .then(resp => {
@@ -664,7 +664,7 @@ export default class ViewBooking extends Component {
                     {
                         text: 'Yes', onPress: () => {
 
-                            fetch("http://soplush.ingicweb.com/soplush/booking/booking.php?action=change_booking_status", {
+                            fetch("http://hnh1.xyz/soplush_new/soplush/booking/booking.php?action=change_booking_status", {
                                 method: 'POST',
                                 // dataType: "json",
                                 headers: {
@@ -687,7 +687,7 @@ export default class ViewBooking extends Component {
 
                                         this.setState({ services, data })
                                         
-                                        fetch(`http://soplush.ingicweb.com/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
+                                        fetch(`http://hnh1.xyz/soplush_new/soplush/beautician/beautician_booking.php?action=get_beautician_bookings&beautician_id=${profileData.user_id}&status=accepted`, {
 
                                                         }).then(res => res.json())
                                                             .then(resp => {
@@ -786,7 +786,7 @@ export default class ViewBooking extends Component {
                 <ImageBackground source={require('../../../assets/inner.png')} style={{ height: "100%", width: "100%", opacity: 0.9 }}>
 
                     <Header
-                        containerStyle={{ marginTop: 60, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 60, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.navigate('Main') }} name="arrow-back" color="#000" />}
                         centerComponent={
@@ -857,7 +857,7 @@ export default class ViewBooking extends Component {
 
                             <View style={{ justifyContent: "center", alignContent: "center", alignItems: "center", marginTop: 20 }}>
 
-                             {this.state.data.length > 0 ?   <View style={{ backgroundColor: "#fff", borderRadius: 10, width: "95%" }}>
+                             {this.state.data.length > 0 ?   <View style={{ backgroundColor: '#800', borderRadius: 10, width: "95%" }}>
                                     {this.state.data.map((value, index) => {
                                         return (
                                             <View key={index} style={{width:'90%', padding: 10, alignSelf:'center'}}>
@@ -907,7 +907,7 @@ export default class ViewBooking extends Component {
                                                 </Button>
                                             </LinearGradient> */}
 
-<LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "95%", borderRadius: 5}}>
+<LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "95%", borderRadius: 5}}>
                                         <TouchableOpacity  onPress={() => { this.props.navigation.navigate('BookingReq')}}  style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "none", opacity: 0.7, borderRadius: 5 }} style={{ flexDirection: "column", justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "transparent", opacity: 0.7, borderRadius: 5, width:'100%' }}>
                                             <Text style={{ alignSelf: "center", textAlignVertical: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17, paddingVertical: 10 , fontWeight:'bold'}}>
                                             DONE
@@ -918,11 +918,13 @@ export default class ViewBooking extends Component {
                                                     
 
                                                     <View style={{flex: 1 ,lignContent: "center", alignItems: "center", marginTop: "5%" }}>
-                                                        <TouchableOpacity style={{ justifyContent: "center", alignContent: "center", alignItems: "center", backgroundColor: "#ffff", width: "95%", borderRadius: 5, opacity: 0.7, borderColor: "#fc8b8c", borderWidth: 1, paddingVertical: 10 }}>
-                                                            <Text style={{ alignSelf: "center", color: "#000", fontFamily: "Poppins-Regular", fontSize: 17 }}>
+                                                    <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "95%", borderRadius: 5}}>
+                                                        <TouchableOpacity style={{ justifyContent: "center", alignContent: "center", alignItems: "center", width: "100%", borderRadius: 5, paddingVertical: 10 }}>
+                                                            <Text style={{ alignSelf: "center", color: "#fff", fontFamily: "Poppins-Regular", fontSize: 17 }}>
                                                                 CANCEL
                                             </Text>
                                                         </TouchableOpacity>
+                                                        </LinearGradient>
                                                     </View>
                                                 </View>
                                             </View>

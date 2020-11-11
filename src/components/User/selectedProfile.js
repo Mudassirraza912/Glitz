@@ -100,7 +100,7 @@ export default class SelectedProfile extends Component {
 
 
                     <Header
-                        containerStyle={{ marginTop: 40, backgroundColor: "#fff" }}
+                        containerStyle={{ marginTop: 40, backgroundColor: '#800', borderBottomWidth:0 }}
                         placement="left"
                         leftComponent={<Icon onPress={() => { this.props.navigation.goBack() }} name="arrow-back" color="#000" />}
                         centerComponent={<Text style={{ alignSelf: 'center', fontSize: 20, fontFamily: "Poppins-Regular" }}>PROFILE</Text>}
@@ -118,12 +118,12 @@ export default class SelectedProfile extends Component {
 
                                 {this.state.selectedUser !== null ?
 
-                                    <View style={{ backgroundColor: "#fff", borderRadius: 20, width: "90%", padding: 0 }}>
+                                    <View style={{ backgroundColor: '#800', borderRadius: 20, width: "90%", padding: 0 }}>
                                         {/* <View style={{ width: "100%" }}>
-                                            <Image resizeMode="cover" style={{ width: "100%", height: 300, borderRadius: 10 }} source={{ uri: `http://soplush.ingicweb.com/soplush/profile_pics/${this.state.profileData.profile_pic}` }} />
+                                            <Image resizeMode="cover" style={{ width: "100%", height: 300, borderRadius: 10 }} source={{ uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.state.profileData.profile_pic}` }} />
                                         </View> */}
                                         <View style={{ width: "100%", marginLeft: 0, marginRight: 0, borderRadius: 10 }}>
-                                            <Image source={{ uri: `http://soplush.ingicweb.com/soplush/profile_pics/${this.state.profileData.profile_pic}` }} style={{ height: 200, width: "100%", borderTopRightRadius: 10, borderTopLeftRadius: 10 }} />
+                                            <Image source={{ uri: `http://hnh1.xyz/soplush_new/soplush/profile_pics/${this.state.profileData.profile_pic}` }} style={{ height: 200, width: "100%", borderTopRightRadius: 10, borderTopLeftRadius: 10 }} />
                                         </View>
 
                                         <View style={{ display: "flex", flexDirection: "column", marginTop: 15, marginLeft: 10, padding: 5 }}>
@@ -248,7 +248,7 @@ export default class SelectedProfile extends Component {
 
                                                             {selectedSlot.time == item.time ?
                                                                 <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.workFunction(item) }}>
-                                                                    <View style={{ backgroundColor: "#fc8b8c", height: 30, width: "100%", borderRadius: 20, alignSelf: "center", justifyContent: "center", alignContent: "center", alignItems: "center" }}>
+                                                                    <View style={{ backgroundColor: "#800", height: 30, width: "100%", borderRadius: 20, alignSelf: "center", justifyContent: "center", alignContent: "center", alignItems: "center" }}>
                                                                         <Text style={{ color: "#fff" }}>{item.time}</Text>
                                                                     </View>
                                                                 </TouchableOpacity>
@@ -410,7 +410,7 @@ export default class SelectedProfile extends Component {
 
 
                                         <View style={{ alignContent: "center", alignItems: "center", marginTop: -10, paddingVertical:30 }}>
-                                            <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10 }}>
+                                            <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10 }}>
                                                 <TouchableOpacity onPress={() => {
                                                     // this.props.navigation.navigate('ConfirmBooking', {
                                                     //     beauticianData: this.state.profileData,
@@ -473,7 +473,7 @@ export default class SelectedProfile extends Component {
                                     :
 
 
-                                    <Card containerStyle={{ backgroundColor: "#fff", borderRadius: 10, width: "90%", }}>
+                                    <Card containerStyle={{ backgroundColor: '#800', borderRadius: 10, width: "90%", }}>
                                         {/* <View style={{
                                             backgroundColor: "transparent",
                                             borderColor: 'gray',
@@ -561,7 +561,7 @@ export default class SelectedProfile extends Component {
 
                                                             {selectedSlot.time == item.time ?
                                                                 <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.workFunction(item) }}>
-                                                                    <View style={{ backgroundColor: "#fc8b8c", height: 30, width: "100%", borderRadius: 10, alignSelf: "center", justifyContent: "center", alignContent: "center", alignItems: "center" }}>
+                                                                    <View style={{ backgroundColor: "#800", height: 30, width: "100%", borderRadius: 10, alignSelf: "center", justifyContent: "center", alignContent: "center", alignItems: "center" }}>
                                                                         <Text style={{ color: "#fff" }}>{item.time}</Text>
                                                                     </View>
                                                                 </TouchableOpacity>
@@ -688,7 +688,7 @@ export default class SelectedProfile extends Component {
 
 
                                         <View style={{alignContent: "center", alignItems: "center", marginTop: "15%" }}>
-                                            <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.0, y: 1.0 }} colors={['#F9B1B0', '#FD8788', '#FF7173']} style={{ width: "90%", borderRadius: 10 }}>
+                                            <LinearGradient start={{ x: 0.05, y: 0.0 }} end={{ x: 1.0, y:0.0 }} colors={['#000', '#9d7e2c', '#e2bf6b']} style={{ width: "90%", borderRadius: 10 }}>
                                                 <TouchableOpacity onPress={() => {
 
                                                     // this.props.navigation.navigate('ConfirmBooking', {
